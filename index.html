@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<title>جمعية التميز المؤسسي</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<style>
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+<div class="navbar">
+<div class="logo"><img alt="شعار الجمعية" src="./OES-logo.svg"/></div>
+<nav>
+<a href="#about">من نحن</a>
+<a href="#why-us">ليش تختارنا؟</a>
+<a href="#audience">خدماتنا</a>
+<a href="#contact">تواصل معنا</a>
+</nav>
+<a class="cta" href="#register">احجز مقعدك الآن</a>
+</div>
+</header>
+<section class="hero fade-in">
+<h1>الخيار الأول والمرجع الأكثر تأثيراً في مجال التميز المؤسسي</h1>
+<p>
+            جمعية وطنية تعنى بنشر ثقافة التميز المؤسسي وتحقيق التحول الفعال في القطاع الحكومي والخاص وغير الربحي.
+    </p>
+<div class="bt-hero">
+<a class="cta" href="mailto:info@oes.org.sa">تواصل معنا</a>
+</div>
+</section>
+<section class="section fade-in" id="about">
+<h2>من نحن</h2>
+<p>
+            نعمل على تمكين الجهات من ترجمة طموحاتها في التميز المؤسسي إلى واقع ملموس، من خلال تقديم حلول استشارية متكاملة، وبرامج تدريبية مصممة بعناية، تدعم تطبيق معايير التميز وتُحدث فارقاً حقيقياً في الأداء، الثقافة، والنتائج.
+    </p>
+<div class="features">
+<div class="card">فريق سعودي</div>
+<div class="card">تركيز نوعي على التميز المؤسسي</div>
+<div class="card">تنوع في الخدمات</div>
+<div class="card">قدرة عالية على تصميم الحلول</div>
+<div class="card">بنية معرفية تفاعلية متجددة</div>
+<div class="card">أدوات تقييم متطورة</div>
+</div>
+</section>
+<section class="section fade-in">
+<div class="features">
+<div class="card">
+<h3>رؤيتنا</h3>
+<p>أن نكون الخيار الأول والمرجع الأكثر تأثيرًا في مجال التميز المؤسسي.</p>
+</div>
+<div class="card">
+<h3>رسالتنا</h3>
+<p>تمكين الجهات من تطبيق ممارسات التميز المؤسسي وتحقيق نتائج مؤثرة.</p>
+</div>
+<div class="card">
+<h3>قيمنا</h3>
+<p>الإتقان – الشراكة – الابتكار – الأثر</p>
+</div>
+</div>
+</section>
+<section class="section" id="why-us">
+  <h2>ليش تختارنا؟</h2>
+  <div class="features">
+    <div class="card fadeUp">فريق سعودي يجمع بين المعرفة الأكاديمية والخبرة التطبيقية الميدانية.</div>
+    <div class="card fadeUp">تركيز نوعي على التميز المؤسسي كاختصاص رئيسي وليس كخدمة ضمنية.</div>
+    <div class="card fadeUp">تنوع في الخدمات يغطي الجوانب الاستشارية والتدريبية والمعرفية.</div>
+    <div class="card fadeUp">قدرة عالية على تصميم حلول مخصصة تتوافق مع احتياجات وأولويات كل جهة.</div>
+    <div class="card fadeUp">اعتماد نماذج ومعايير محلية وعالمية مثل: KAQA، EFQM، ISO، وBaldrige.</div>
+    <div class="card fadeUp">بنية معرفية تفاعلية متجددة تسهم في دعم التحسين المستمر.</div>
+    <div class="card fadeUp">أدوات تقييم متطورة قابلة للتطبيق.</div>
+    <div class="card fadeUp">برامج تخصصية في مفاهيم التميز.</div>
+    <div class="card fadeUp">برامج مخصصة للجهات تُبنى بعد تحليل احتياجاتها.</div>
+    <div class="card fadeUp">أدوات لقياس أثر التدريب وربطه بالتحسين.</div>
+  </div>
+</section>
+
+<!-- قسم نخدم من -->
+<section class="section" id="audience">
+  <h2>نخدم من؟</h2>
+  <div class="features">
+    <div class="card fadeUp">الجهات الحكومية</div>
+    <div class="card fadeUp">الجهات غير الربحية</div>
+    <div class="card fadeUp">المؤسسات الأكاديمية</div>
+    <div class="card fadeUp">منشآت القطاع الخاص</div>
+    <div class="card fadeUp">المنشآت الصغيرة والمتوسطة</div>
+    <div class="card fadeUp">صناع القرار والقيادات المؤسسية</div>
+  </div>
+</section>
+<!-- نموذج التواصل المباشر والنشرة البريدية -->
+<section class="section fade-in" id="contact">
+  <h2>تواصل معنا</h2>
+  <form class="contact-form">
+    <input type="text" placeholder="الاسم الكامل" required />
+    <input type="email" placeholder="البريد الإلكتروني" required />
+    <textarea placeholder="رسالتك..." required></textarea>
+    <button type="submit">إرسال</button>
+  </form>
+</section>
+
+<!-- الفوتر -->
+<footer class="fade-in">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>بيانات التواصل</h4>
+      <p><a href="mailto:info@oes.org.sa">info@oes.org.sa</a></p>
+      <p><a href="tel:0503110393">0503110393</a></p>
+      <div class="social-icons">
+        <a href="https://wa.me/966503110393" target="_blank"><img src="icons/whatsapp.svg" alt="واتساب" /></a>
+        <a href="https://twitter.com/oes_org_sa" target="_blank"><img src="icons/twitter.svg" alt="تويتر" /></a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h4>روابط سريعة</h4>
+      <ul>
+        <a href="#services">الخدمات</a>
+        <a href="#">الخصوصية</a>
+        <a href="#about">من نحن</a>
+      </ul>
+    </div>
+  </div>
+   <div class="footer-column">
+      <p class="copyright">© 2025 جمعية التميز المؤسسي - جميع الحقوق محفوظة</p>
+    </div>
+</footer>
+
+<!-- زر واتساب ثابت -->
+<a href="https://wa.me/966503110393" class="whatsapp-button" target="_blank">
+  <img src="icons/whatsapp.svg" alt="تواصل واتساب" />
+</a>
+
+<script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    header.classList.toggle("scrolled", window.scrollY > 10);
+});
+</script>
+
+<script>
+  // تهيئة الفايربيس
+  const firebaseConfig = {
+    apiKey: "AIzaSyBlsY-MMxBz_cc6n8Xz-Z9hB2buun4jszI",
+    authDomain: "abbait-4e902.firebaseapp.com",
+    databaseURL: "https://abbait-4e902-default-rtdb.firebaseio.com",
+    projectId: "abbait-4e902",
+    storageBucket: "abbait-4e902.appspot.com",
+    messagingSenderId: "12872633784",
+    appId: "1:12872633784:web:dc8ff66d9bc6c0eb38134d",
+    measurementId: "G-HD6J69MDH4"
+  };
+
+  const app = firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+
+  // أسماء الأيام بالعربي
+  const daysArabic = ["الأحد", "الإثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
+
+  // دالة تجيب نوع الجهاز
+  function getDeviceType() {
+    const ua = navigator.userAgent;
+    if (/mobile/i.test(ua)) return "جوال";
+    if (/tablet/i.test(ua)) return "تابلت";
+    return "كمبيوتر";
+  }
+
+  // دالة تجيب نوع المتصفح
+  function getBrowserType() {
+    const ua = navigator.userAgent;
+    if (ua.indexOf("Chrome") !== -1) return "Chrome";
+    if (ua.indexOf("Firefox") !== -1) return "Firefox";
+    if (ua.indexOf("Safari") !== -1 && ua.indexOf("Chrome") === -1) return "Safari";
+    if (ua.indexOf("Edge") !== -1) return "Edge";
+    if (ua.indexOf("Opera") !== -1 || ua.indexOf("OPR") !== -1) return "Opera";
+    return "غير معروف";
+  }
+
+  // جلب الموقع الجغرافي وتخزين البيانات
+  document.querySelector('.contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = this.querySelector('input[type="text"]').value;
+    const email = this.querySelector('input[type="email"]').value;
+    const message = this.querySelector('textarea').value;
+
+    const now = new Date();
+    const dateTime = now.toLocaleString('ar-EG');
+    const dayName = daysArabic[now.getDay()];
+    const browser = getBrowserType();
+    const device = getDeviceType();
+
+    // جلب المدينة
+    fetch("https://ipapi.co/json/")
+      .then(response => response.json())
+      .then(location => {
+        const city = location.city || "غير معروف";
+
+        const newContactRef = db.ref('contactMessages').push();
+        newContactRef.set({
+          name,
+          email,
+          message,
+          dateTime,
+          day: dayName,
+          city,
+          browser,
+          device
+        }).then(() => {
+          alert("تم إرسال رسالتك بنجاح 🎉");
+          document.querySelector('.contact-form').reset();
+        }).catch((error) => {
+          alert("حدث خطأ أثناء الإرسال ❌");
+          console.error(error);
+        });
+      }).catch(() => {
+        alert("تعذر تحديد موقعك، لكن تم إرسال باقي البيانات.");
+      });
+  });
+</script>
+</body>
+</html>
