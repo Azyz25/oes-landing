@@ -23,18 +23,32 @@
 </style>
 </head>
 <body>
-<header>
-<div class="navbar">
-<div class="logo"><img alt="شعار الجمعية" src="./OES-logo.svg"/></div>
-<nav>
-<a href="#about">من نحن</a>
-<a href="#why-us">لماذا نحن؟</a>
-<a href="#audience">خدماتنا</a>
-<a href="#contact">تواصل معنا</a>
-</nav>
-<a class="cta" href="#register">احجز مقعدك الآن</a>
-</div>
-</header>
+ <header>
+    <div class="navbar" style="position: relative;">
+      <div class="logo"><img alt="شعار الجمعية" src="./OES-logo.svg"/></div>
+
+      <!-- زر القائمة بالجوال -->
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <!-- القائمة العادية للكبير -->
+      <nav>
+        <a href="#about">من نحن</a>
+        <a href="#why-us">لماذا نحن؟</a>
+        <a href="#audience">خدماتنا</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+
+      <!-- القائمة المنسدلة للجوال -->
+      <div id="mobileMenu" class="mobile-menu">
+        <a href="#about" onclick="toggleMenu()">من نحن</a>
+        <a href="#why-us" onclick="toggleMenu()">لماذا نحن؟</a>
+        <a href="#audience" onclick="toggleMenu()">خدماتنا</a>
+        <a href="#contact" onclick="toggleMenu()">تواصل معنا</a>
+      </div>
+
+      <a class="cta" href="#register">احجز مقعدك الآن</a>
+    </div>
+  </header>
 <section class="hero fade-in">
 <h1>الخيار الأول والمرجع الأكثر تأثيراً في مجال التميز المؤسسي</h1>
 <p>
