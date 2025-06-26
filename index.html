@@ -247,6 +247,18 @@ window.addEventListener("scroll", function () {
         alert("تعذر تحديد موقعك، لكن تم إرسال باقي البيانات.");
       });
   });
+
+  const linksRef = db.ref('siteLinks');
+
+  linksRef.child('registerLink').on('value', snap => {
+    const url = snap.val();
+    if (url) document.getElementById('registerBtn').href = url;
+  });
+
+  linksRef.child('heroContactLink').on('value', snap => {
+    const url = snap.val();
+    if (url) document.getElementById('heroContactBtn').href = url;
+  });
 </script>
 
  <script>
