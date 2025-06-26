@@ -248,5 +248,15 @@ window.addEventListener("scroll", function () {
       });
   });
 </script>
+
+ <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("active");
+    }
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      header.classList.toggle("scrolled", window.scrollY > 10);
+    });
+  </script>
 </body>
 </html>
