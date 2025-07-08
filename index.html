@@ -21,6 +21,19 @@
         transform: none;
     }
 }
+
+@media (min-width: 769px) {
+  #registerBtnmobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #registerBtnmobile {
+    display: block !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -57,6 +70,7 @@
     </p>
 <div class="bt-hero">
   <a id="heroContactBtn" class="cta" href="#">تواصل معنا</a>
+  <a id="registerBtnmobile" class="cta" href="#">احجز مقعدك الآن</a>
 </div>
 </section>
 <section class="section fade-in" id="about">
@@ -254,6 +268,7 @@ window.addEventListener("scroll", function () {
   linksRef.child('registerLink').on('value', snap => {
     const url = snap.val();
     if (url) document.getElementById('registerBtn').href = url;
+    if (url) document.getElementById('registerBtnmobile').href = url;
   });
 
   linksRef.child('heroContactLink').on('value', snap => {
