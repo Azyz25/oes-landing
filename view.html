@@ -63,11 +63,11 @@
       color: #333;
     }
 
-   p {
-  color: #555;
-  line-height: 1.8;
-  white-space: pre-line;
-}
+    p {
+      color: #555;
+      line-height: 1.8;
+      white-space: pre-line;
+    }
   </style>
 </head>
 <body>
@@ -75,8 +75,9 @@
   <div class="policy-box">
     <img src="./OES-logo.svg" alt="شعار الجمعية">
     <div class="tabs">
-      <span class="active" onclick="showPolicy('usage')">سياسة الاستخدام والخصوصية</span>
-      <span onclick="showPolicy('copyright')">حقوق النشر</span>
+      <span data-type="usage">سياسة الاستخدام والخصوصية</span>
+      <span data-type="copyright">حقوق النشر</span>
+      <span data-type="nda">سياسة عدم الإفشاء</span>
     </div>
     <h2 id="policy-title">سياسة الاستخدام والخصوصية</h2>
     <p id="policy-text">
@@ -87,8 +88,6 @@
 · المنتج الخدمي الاستشاري: يُقصد بها كل خدمة تقدمها الجمعية للمستفيدين، مثل: الدورات التدريبية، وورش العمل، والندوات، والمحاضرات، والاستشارات.
 
 · المستفيد: كل طرف حضر أو تلقى المنتجات الخدمية الاستشارية التي تقدمها الجمعية.
-
-
 
 (تمهيد):
 
@@ -101,8 +100,6 @@
 - تعد الموافقة على الطلب بمثابة موافقة نهائية غير مشروطه من المستفيد على جميع الشروط.
 
 - شروط الخدمة هذه محكومة ومصاغة وفقا للأنظمة المعمول بها في المملكة العربية السعودية، وهي خاضعة تمامًا وكليًا للأنظمة المعمول بها في المملكة العربية السعودية.
-
-
 
 (سياسة الخصوصية وسرية المعلومات):
 
@@ -118,13 +115,13 @@
 
   <script>
     const titleEl = document.getElementById('policy-title');
-    const textEl = document.getElementById('policy-text');
-    const spans = document.querySelectorAll('.tabs span');
+    const textEl  = document.getElementById('policy-text');
+    const tabs    = document.querySelectorAll('.tabs span');
 
     const policies = {
-  usage: {
-    title: 'سياسة الاستخدام والخصوصية',
-    text: `(تعريفات):
+      usage: {
+        title: 'سياسة الاستخدام والخصوصية',
+        text: `(تعريفات):
 
 · الجمعية: يُقصد بها الجمعية التعاونية للتميز المؤسسي.
 
@@ -153,10 +150,10 @@
 - كقاعدة عامة- لا يطلع على هذه المعلومات إلا منسوبو الجمعية، ولن يقوموا بنشرها أو بثها للغير.
 
 - يسعى الموقع الإلكتروني للجمعية للحفاظ على سلامة المستخدمين، وتقوم الجمعية بإبلاغ الجهات المختصة بعد التشاور مع الجهات ذات العلاقة في حالة ملاحظة لأي نشاط غير نظامي يقوم به المستفيد.`
-  },
-  copyright: {
-    title: 'حقوق النشر',
-    text: `(تعريفات):
+      },
+      copyright: {
+        title: 'حقوق النشر',
+        text: `(تعريفات):
 
 · الجمعية: يُقصد بها الجمعية التعاونية للتميز المؤسسي.
 
@@ -177,16 +174,46 @@
 - شروط الخدمة هذه محكومة ومصاغة وفقا للأنظمة المعمول بها في المملكة العربية السعودية، وهي خاضعة تمامًا وكليًا للأنظمة المعمول بها في المملكة العربية السعودية.
 
 إن جميع حقوق الملكية الفكرية وحقوق النشر -سواء كانت مسجلة أو غير مسجلة في الموقع- وكافة المعلومات والتصاميم الواردة على الموقع تعتبر ملكا للجمعية المسجلة في المملكة العربية السعودية بوزارة الموارد البشرية والتنمية الاجتماعية برقم التسجيل (10133)، في منطقة الرياض، وإن كل محتويات الموقع محمية أيضا ومحفوظة بموجب حقوق النشر في المملكة والاتفاقيات الدولية التي تكون المملكة طرفا فيها.`
-  }
-};
+      },
+      nda: {
+        title: 'سياسة عدم الإفشاء',
+        text: `(تعريفات):
 
-function showPolicy(type) {
-  spans.forEach(s => s.classList.remove('active'));
-  event.target.classList.add('active');
-  titleEl.textContent = policies[type].title;
-  textEl.innerHTML = policies[type].text.replace(/\n/g, '<br>');
-}
+· الجمعية: يُقصد بها الجمعية التعاونية للتميز المؤسسي.
 
+· المعلومات السرية: تُقصد بها أي بيانات أو مستندات أو محتوى يحويه المستفيد أو يطلع عليه أثناء استخدامه لخدمات الجمعية.
+
+- تلتزم الجمعية، والمستفيد على حد سواء، بعدم إفشاء أي معلومة سرية لطرف ثالث دون موافقة خطية مسبقة.
+- يستثنى من ذلك كل ما يطلبه القانون أو الجهات الحكومية المخوّلة.
+- تظل هذه الالتزامات سارية لمدة خمس سنوات بعد انتهاء علاقة الاستفادة.`
+      }
+    };
+
+    function showPolicy(type) {
+      tabs.forEach(t => t.classList.remove('active'));
+      const el = document.querySelector(`.tabs span[data-type="${type}"]`);
+      el.classList.add('active');
+      titleEl.textContent = policies[type].title;
+      textEl.innerHTML    = policies[type].text.replace(/\n/g, '<br>');
+      const map = { usage: '#1', copyright: '#2', nda: '#3' };
+      if (location.hash !== map[type]) {
+        history.replaceState(null, '', map[type]);
+      }
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        showPolicy(tab.dataset.type);
+      });
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      switch (location.hash) {
+        case '#2': showPolicy('copyright'); break;
+        case '#3': showPolicy('nda');       break;
+        default:   showPolicy('usage');     break;
+      }
+    });
   </script>
 
 </body>
